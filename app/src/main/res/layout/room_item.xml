@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id='@+id/room_img'
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:src='@drawable/single_room_1'
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <TextView
+        android:id='@+id/room_type'
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text='单人间'
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/room_img"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id='@+id/room_message'
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text='25平米  无餐食  大床  单人入住  有窗'
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/room_img"
+        app:layout_constraintTop_toBottomOf="@+id/room_type"></TextView>
+
+    <TextView
+        android:id='@+id/room_id'
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='编号  0001'
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/room_img"></TextView>
+
+    <ImageView
+        android:id='@+id/RMB'
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity='right'
+        android:src='@drawable/RMB'
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/reserve_button"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toEndOf="@+id/room_id"
+        app:layout_constraintTop_toBottomOf="@+id/room_message"
+        app:layout_constraintVertical_bias="0.26"></ImageView>
+
+    <TextView
+        android:id="@+id/room_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4399"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/reserve_button"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toEndOf="@+id/RMB"
+        app:layout_constraintTop_toBottomOf="@+id/room_message"
+        app:layout_constraintVertical_bias="0.23000002"></TextView>
+
+    <Button
+        android:id="@+id/reserve_button"
+        style="@android:style/Widget.Button"
+        android:layout_width="75dp"
+        android:layout_height="37dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="预订"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/room_message"></Button>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="86dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
