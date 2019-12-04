@@ -56,7 +56,7 @@ public class RoomAdapter extends RecyclerView.Adapter <RoomAdapter.ViewHolder>{
         holder.room_message.setText(room.getRoom_message());
         holder.room_id.setText(room.getRoom_id());
         holder.RMB_img.setImageResource(room.getRMB_src_id());
-        holder.room_price.setText(room.getRoom_price());
+        holder.room_price.setText(room.getRoom_price()+"");
     }
 
     public int getItemCount(){
