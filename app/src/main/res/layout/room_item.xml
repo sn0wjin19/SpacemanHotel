@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:src='@drawable/single_room_1'
+        android:src="@drawable/single_room_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ImageView>
 
@@ -20,7 +20,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text='单人间'
+        android:text="单人间"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/room_img"
         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -30,7 +30,7 @@
         android:layout_width="363dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text='25平米  无餐食  大床  单人入住  有窗'
+        android:text="25平米  无餐食  大床  单人入住  有窗"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/room_img"
@@ -40,17 +40,17 @@
         android:id='@+id/room_id'
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text='编号  0001'
+        android:text="编号  0001"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/room_img"></TextView>
 
     <ImageView
-        android:id='@+id/RMB'
+        android:id='@+id/RMB_img'
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity='right'
-        android:src='@drawable/RMB'
+        android:src="@drawable/rmb"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@+id/reserve_button"
         app:layout_constraintHorizontal_bias="0.86"
@@ -66,7 +66,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@+id/reserve_button"
         app:layout_constraintHorizontal_bias="0.76"
-        app:layout_constraintStart_toEndOf="@+id/RMB"
+        app:layout_constraintStart_toEndOf="@+id/RMB_img"
         app:layout_constraintTop_toBottomOf="@+id/room_message"
         app:layout_constraintVertical_bias="0.23000002"></TextView>
 
