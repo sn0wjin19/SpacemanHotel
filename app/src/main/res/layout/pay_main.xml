@@ -1,30 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#104E8B"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/pay_state"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
         android:layout_weight="1"
         android:gravity="center"
         android:text="太空人酒店"
+        android:textColor="	#FFFFFF"
         android:textSize="40sp" />
 
-    <view
+    <LinearLayout
+        android:id="@+id/checkboxmain"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignBottom="@id/pay_state"
-        android:layout_alignTop="@id/pay_button" />
+        android:layout_height="500sp"
+        android:layout_alignTop="@id/pay_state"
+        android:background="#ffff"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/pay_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="Button" />
-</RelativeLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="60sp"
+          android:id="@+id/checkboxtop"
+          >
+
+          <Button
+              android:id="@+id/backbutton"
+              android:layout_width="50sp"
+              android:layout_height="match_parent"
+              android:background="@drawable/cancelbutton"
+               />
+          <TextView
+              android:id="@+id/checktext"
+              android:layout_width="310dp"
+              android:layout_height="match_parent"
+              android:layout_toLeftOf="@id/helpbutton"
+              android:layout_toRightOf="@id/backbutton"
+              android:gravity="center"
+              android:text="确认付款"
+              android:textSize="20sp" />
+          <Button
+              android:id="@+id/helpbutton"
+              android:layout_width="50sp"
+              android:layout_height="match_parent"
+              android:background="@drawable/helpbutton"
+              />
+      </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignBottom="@id/checkboxtop"
+            android:text="$4999"
+            android:gravity="center"
+            android:textSize="40sp" />
+        <TextView
+            android:id="@+id/ordertext"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="订单金额"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/messagetext"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="订单信息"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/paywayselect"
+            android:layout_height="40sp"
+            android:layout_width="match_parent"
+            >
+            <TextView
+                android:id="@+id/payselecttext"
+                android:layout_width="350sp"
+                android:layout_height="match_parent"
+                android:text="付款方式"
+                android:textSize="20sp"
+                android:layout_marginLeft="0dp"
+                />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignRight="@id/payselecttext"
+                android:text="余额"
+                android:textSize="18sp"
+                android:background="#ffff"
+                />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/paywayselect">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/btn_bg_round_click"
+                android:layout_alignParentBottom="true"
+                android:text="立即支付"
+                android:textColor="@drawable/btn_click_text_color"
+                android:textSize="25dp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
