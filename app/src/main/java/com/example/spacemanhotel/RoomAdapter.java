@@ -1,5 +1,7 @@
 package com.example.spacemanhotel;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.w3c.dom.Text;
@@ -17,8 +20,11 @@ import java.util.List;
 public class RoomAdapter extends RecyclerView.Adapter <RoomAdapter.ViewHolder>{
 
     private List<Room> RoomList;
+    private ViewHolder holder;
+    private Context mContext;
 
     static class ViewHolder extends RecyclerView.ViewHolder{
+        CardView card_view;
         ImageView room_img;
         TextView room_type;
         TextView room_message;
@@ -29,6 +35,7 @@ public class RoomAdapter extends RecyclerView.Adapter <RoomAdapter.ViewHolder>{
 
         public ViewHolder(View view){
             super(view);
+            card_view = (CardView)view.findViewById(R.id.room_cardView);
             room_img = (ImageView)view.findViewById(R.id.room_img);
             room_type = (TextView)view.findViewById(R.id.room_type);
             room_message = (TextView)view.findViewById(R.id.room_message);
@@ -44,8 +51,18 @@ public class RoomAdapter extends RecyclerView.Adapter <RoomAdapter.ViewHolder>{
     }
 
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+        if(mContext == null){
+            mContext = parent.getContext();
+        }
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.room_item, parent, false);
         ViewHolder holder = new ViewHolder(view);
+        holder.card_view.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+//                int position = holder.getAdapterPosition();
+                Intent intent = new Intent(mContext, ReserveInfoActivity.class);
+                mContext.startActivity(intent);
+            }
+        });
         return holder;
     }
 
