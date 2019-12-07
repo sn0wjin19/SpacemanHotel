@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null){
-            actionBar.setDefaultDisplayHomeAsUpEnabled(true);
-            // actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            //actionBar.setHomeAsUpIndicator(R.drawable.test);
         }
         initRooms();
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler_view);

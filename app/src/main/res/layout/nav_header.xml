@@ -13,6 +13,24 @@
         android:layout_centerInParent="true">
     </de.hdodenhof.circleimageview.CircleImageView>
 
+    <TextView
+        android:id="@+id/self_introduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:text="个性签名: "
+        android:textColor="@color/mr_cast_meta_default_text_color"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/self_introduction_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/self_introduction"
+        android:layout_toRightOf="@+id/self_introduction"
+        android:text="nmsl"
+        android:textColor="@color/mr_cast_meta_default_text_color"></TextView>
 
 
 </RelativeLayout>
