@@ -10,11 +10,16 @@
         android:layout_height="250dp">
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/reserve_info_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
@@ -26,47 +31,136 @@
 
         <RelativeLayout
             android:layout_height="match_parent"
-            android:layout_width="match_parent">
+            android:layout_width="wrap_content">
 
             <TextView
                 android:id="@+id/room_num"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:text="房间数"
-                android:layout_marginTop="20dp"></TextView>
+                android:layout_marginTop="30dp">
+            </TextView>
+
+            <Spinner
+                android:id="@+id/room_num_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@id/room_num"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/room_num"></Spinner>
+
             <TextView
                 android:id="@+id/guest_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/room_num"
                 android:text="住客姓名"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="30dp">
             </TextView>
+
+            <EditText
+                android:id="@+id/guest_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/guest_name"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/guest_name"
+                android:ems="10"
+                android:inputType="text" />
+
             <TextView
                 android:id="@+id/guest_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/guest_name"
                 android:text="手机号"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="30dp">
             </TextView>
+
             <EditText
-                android:id="@+id/guest_phone_content"
+                android:id="@+id/guest_phone_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:layout_alignBaseline="@id/guest_phone"
+                android:layout_marginLeft="30dp"
                 android:layout_toRightOf="@id/guest_phone"
-                android:layout_alignTop="@id/guest_phone"
+                android:ems="10"
                 android:inputType="phone" />
+
             <TextView
                 android:id="@+id/estimate_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/guest_phone"
                 android:text="预计到店"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="30dp">
             </TextView>
+
+            <EditText
+                android:id="@+id/estimate_time_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/estimate_time"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/estimate_time"
+                android:ems="10"
+                android:inputType="time" />
+
+            <TextView
+                android:id="@+id/special_need"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/estimate_time"
+                android:text="特殊需要?"
+                android:layout_marginTop="30dp">
+            </TextView>
+
+            <EditText
+                android:id="@+id/special_need_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/special_need"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/special_need"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:gravity="top"
+                android:minLines="3" />
+            <TextView
+                android:id="@+id/invoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/special_need_text"
+                android:text="发票"
+                android:layout_marginTop="30dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/invoice_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/invoice"
+                android:layout_marginLeft="44dp"
+                android:layout_toRightOf="@id/invoice"
+                android:text="莫得发票">
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/invoice"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:id="@+id/pay_online_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="在线支付 4399元"
+                    android:textAlignment="center"
+                    android:background="?attr/colorPrimary">
+                </Button>
+            </androidx.cardview.widget.CardView>
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 
