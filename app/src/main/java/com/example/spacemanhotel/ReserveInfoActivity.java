@@ -3,9 +3,15 @@ package com.example.spacemanhotel;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -37,5 +43,21 @@ public class ReserveInfoActivity extends AppCompatActivity {
         //为spinner绑定我们定义好的数据适配器
         Spinner spinner = (Spinner)findViewById(R.id.room_num_spinner);
         spinner.setAdapter(adapter);
+        Button payOnlinebutton = (Button)findViewById(R.id.pay_online_button);
+        payOnlinebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ReserveInfoActivity.this, PayMainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return true;
     }
 }
