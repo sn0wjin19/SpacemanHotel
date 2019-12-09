@@ -56,6 +56,13 @@ public class RoomAdapter extends RecyclerView.Adapter <RoomAdapter.ViewHolder>{
         }
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.room_item, parent, false);
         ViewHolder holder = new ViewHolder(view);
+        holder.reserve_button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+//                int position = holder.getAdapterPosition();
+                Intent intent = new Intent(mContext, ReserveInfoActivity.class);
+                mContext.startActivity(intent);
+            }
+        });
         holder.card_view.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 //                int position = holder.getAdapterPosition();
