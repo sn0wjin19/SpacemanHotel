@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/self_introduction"
         android:layout_toRightOf="@+id/self_introduction"
-        android:text="nmsl"
+        android:text="住这个酒店的都尼玛血逼去死把你妈磨成泥"
         android:textColor="@color/mr_cast_meta_default_text_color"></TextView>
 
 

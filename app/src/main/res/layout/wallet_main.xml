@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/wallethead"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#EE5C42"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/wallethead_top"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            >
+
+            <Button
+                android:id="@+id/backbutton"
+                android:layout_width="34dp"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的钱包"
+                android:textSize="40dp"
+                android:textColor="#ffff"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/wallethead_top"
+            >
+            <TextView
+                android:id="@+id/rental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="4000$"
+                android:textSize="40dp"
+                android:textColor="#ffff"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rental"
+                android:layout_marginTop="10dp"
+                android:text="钱包总额"
+                android:textSize="20dp"
+                android:textColor="#ffff"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.5"
+            android:background="#ffff"
+            android:text="充值"
+            android:textColor="#4c221a"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/wallethead"
+        android:background="#DDDDDD"
+        >
+        <Button
+            android:id="@+id/billing_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffff"
+            android:layout_marginTop="10dp"
+            android:text="账单明细"
+            android:textSize="17dp"
+            android:gravity="center_vertical"/>
+        <Button
+            android:id="@+id/my_bankcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffff"
+            android:layout_below="@id/billing_details"
+            android:layout_marginTop="10dp"
+            android:text="我的银行卡"
+            android:textSize="17dp"
+            android:gravity="center_vertical"/>
+        <Button
+            android:id="@+id/my_alipay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffff"
+            android:layout_below="@id/my_bankcard"
+            android:text="我的支付宝"
+            android:textSize="17dp"
+            android:gravity="center_vertical"/>
+        <Button
+            android:id="@+id/payment_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffff"
+            android:layout_below="@id/my_alipay"
+            android:layout_marginTop="10dp"
+            android:text="支付设置"
+            android:textSize="17dp"
+            android:gravity="center_vertical"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="175dp"
+        android:text="常见问题"
+        android:textColor="#0000FF"
+        android:background="#DDDDDD"/>
+</RelativeLayout>
