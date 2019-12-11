@@ -47,5 +47,14 @@
             android:layout_below="@id/login_button_next"
             android:background="#00FFFFFF"
             android:text="使用其他方式登录"></Button>
+
+        <TextView
+            android:id="@+id/text_userAgreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_alignParentBottom="true"
+            android:textColorHighlight="#00ffffff">
+        </TextView>
 </RelativeLayout>
 
