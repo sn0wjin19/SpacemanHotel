@@ -69,6 +69,14 @@ public class LoginActivty extends AppCompatActivity {
             public void onClick(View v) {
                 final BottomSheetDialog bottomSheet = new BottomSheetDialog(LoginActivty.this);//实例化BottomSheetDialog
                 bottomSheet.setCancelable(true);//设置点击外部是否可以取消
+//                  View view = getLayoutInflater().inflate(R.layout.login_dialog, null);
+//                Button cancel = (Button)view.findViewById(R.id.login_dialog_cancel);
+//                cancel.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Toast.makeText(LoginActivty.this, "cancel", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
                 bottomSheet.setContentView(R.layout.login_dialog);//设置对框框中的布局
                 bottomSheet.findViewById(R.id.login_dialog_cancel).setOnClickListener(new View.OnClickListener() {
                     @Override
