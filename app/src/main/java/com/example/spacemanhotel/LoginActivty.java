@@ -3,9 +3,8 @@ package com.example.spacemanhotel;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Spannable;
@@ -13,8 +12,6 @@ import android.text.SpannableStringBuilder;
 import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
-import android.text.style.ForegroundColorSpan;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,7 +21,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.List;
@@ -95,7 +91,9 @@ public class LoginActivty extends AppCompatActivity {
             case android.R.id.home:
                 finish();
                 break;
-            case R.id.register_item:
+            case R.id.registry_item:
+                Intent intent = new Intent(LoginActivty.this, Registry.class);
+                startActivity(intent);
                 break;
         }
         return true;
@@ -114,7 +112,7 @@ public class LoginActivty extends AppCompatActivity {
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.register, menu);
+        getMenuInflater().inflate(R.menu.registry, menu);
         return true;
     }
 

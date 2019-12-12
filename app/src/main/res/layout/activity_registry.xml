@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/registry_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/registry_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registry_toolbar"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"></TextView>
+    <TextView
+        android:id="@+id/registry_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registry_info"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:visibility="gone">
+    </TextView>
+    <EditText
+        android:id="@+id/registry_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registry_notice"
+        android:layout_marginTop="10dp"
+        android:hint="输入您的手机号"
+        android:inputType="phone"></EditText>
+
+    <Button
+        android:id="@+id/registry_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registry_phone"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:text="获取验证码"></Button>
+
+</RelativeLayout>
