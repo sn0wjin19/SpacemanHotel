@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+
+    >
+    <RelativeLayout
+        android:id="@+id/order_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+
+        <TextView
+            android:id="@+id/order_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10-1"
+            android:textSize="20dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/order_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_date"
+            android:background="#ffff">
+        <TextView
+            android:id="@+id/hotel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="太空人酒店下沙店"
+            android:textSize="30dp"
+            />
+         <TextView
+             android:id="@+id/order_money"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toRightOf="@id/hotel_name"
+             android:layout_marginLeft="70dp"
+             android:text="¥1000"
+             android:textSize="20dp"/>
+          <RelativeLayout
+              android:id="@+id/datebetween"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/hotel_name">
+
+              <TextView
+                  android:id="@+id/frontdate"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="2019-12-01"/>
+              <TextView
+                  android:id="@+id/dateto"
+                  android:layout_toRightOf="@id/frontdate"
+                  android:layout_marginLeft="20dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="至"/>
+              <TextView
+                  android:id="@+id/behinddate"
+                  android:layout_toRightOf="@id/dateto"
+                  android:layout_marginLeft="20dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="2019-12-04"/>
+              <TextView
+                  android:id="@+id/room_num"
+                  android:layout_toRightOf="@id/behinddate"
+                  android:layout_marginLeft="100dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="1间"/>
+
+          </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/order_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/morechoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/order_state_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@id/morechoose"
+                android:text="已支付"
+                android:textSize="20dp"/>
+            <Button
+                android:id="@+id/checkbutton"
+                android:layout_toLeftOf="@id/regetbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_common_1"
+                android:text="确认"
+                android:textSize="15dp"
+                android:textColor="#ffff"/>
+            <Button
+                android:id="@+id/regetbutton"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_common_1"
+                android:text="再次预定"
+                android:textSize="15dp"
+                android:textColor="#ffff"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

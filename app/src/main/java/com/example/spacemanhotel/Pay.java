@@ -1,4 +1,6 @@
 package com.example.spacemanhotel;
 
-public class Pay {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Pay extends AppCompatActivity {
 }

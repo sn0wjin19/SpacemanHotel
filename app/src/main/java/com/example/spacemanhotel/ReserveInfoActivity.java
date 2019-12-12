@@ -42,6 +42,7 @@ public class ReserveInfoActivity extends AppCompatActivity {
 
         //为spinner绑定我们定义好的数据适配器
         Spinner spinner = (Spinner)findViewById(R.id.room_num_spinner);
+        
         spinner.setAdapter(adapter);
         Button payOnlinebutton = (Button)findViewById(R.id.pay_online_button);
         payOnlinebutton.setOnClickListener(new View.OnClickListener() {
