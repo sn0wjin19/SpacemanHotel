@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginNext"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/login_next_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/login_next_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_next_toolbar"
+        android:layout_marginTop="20dp"
+        android:text="验证码已发送至173****0490"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/login_next_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_next_info"
+        android:text="60s后重新获取"
+        android:textStyle="bold"></TextView>
+
+    <com.alimuzaffar.lib.pin.PinEntryEditText
+        android:id="@+id/login_next_pinEntry"
+        android:layout_below="@id/login_next_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cursorVisible="false"
+        android:digits="1234567890"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/login_next_passwordLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_next_pinEntry"
+        android:background="#00FFFFFF"
+        android:text="使用密码登录"
+        android:textColor="#F44336"
+        style="?android:attr/borderlessButtonStyle">></Button>
+
+    <Button
+        android:id="@+id/login_next_passwordForget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@id/login_next_passwordLogin"
+        android:background="#00FFFFFF"
+        android:text="收不到验证码?"
+        android:textColor="#F44336"
+        style="?android:attr/borderlessButtonStyle"></Button>
+</RelativeLayout>

@@ -84,6 +84,14 @@ public class LoginActivty extends AppCompatActivity {
                 bottomSheet.show();//显示弹窗this
             }
         });
+        Button next = (Button)findViewById(R.id.login_button_next);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivty.this, LoginNext.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
