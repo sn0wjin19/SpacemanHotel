@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".order_state"></activity>
+        <activity android:name=".LoginNext" android:label="XX登录"></activity>
+        <activity
+            android:name=".Password"
+            android:label="设置密码" />
         <activity
             android:name=".Registry"
             android:label="注册" />
@@ -27,8 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WalletActivity" />
-        <activity android:name=".Pay" />
     </application>
 
 </manifest>
