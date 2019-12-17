@@ -1,23 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- 连框颜色值 --><item>
-    <shape>
-        <solid android:color="#99BBFF" />
-        <corners android:radius="20dp" />
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    </shape>
-</item>
-    <!-- 主体背景颜色值 -->
-    <item android:bottom="1dp" android:right="1dp" android:top="1dp" android:left="1dp">
-        <shape>
-            <gradient android:startColor="#99BBFF" android:centerColor="#0000FF"
-                android:endColor="#99BBFF" android:type="linear" android:angle="90"
-                android:centerX="0.5" android:centerY="0.5" />
-
-            <padding android:left="2dp" android:top="2dp" android:right="2dp"
-                android:bottom="2dp" />
-            <!-- 应该是圆角 -->
-            <corners android:radius="20dp" />
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle" >
+            <solid android:color="#ff58bb52" />
+            <!--设置渐变色 angle=0 从左到右渲染，angle=90从上到下渲染，angle=180 从右到左渲染，-->
+            <gradient
+                android:angle="0"
+                android:startColor="#ffff"
+                android:endColor="#ffff" />
+            <!--设置角的弧度-->
+            <corners android:radius="8dp" />
+            <!--设置边框以及弧度-->
+            <stroke
+                android:width="3dp"
+                android:color="#666666" />
         </shape>
     </item>
-</layer-list>
+
+    <item  android:state_pressed="true">
+        <shape>
+            <!--点击之后的颜色-->
+            <solid android:color="#fff000"/>
+            <!--设置角的弧度-->
+            <corners android:radius="8dp"/>
+            <!--点击之后的边框-->
+            <stroke
+                android:width="3dp"
+                android:color="#000000"/>
+        </shape>
+    </item>
+</selector>

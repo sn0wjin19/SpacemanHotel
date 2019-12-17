@@ -10,7 +10,8 @@
         android:id="@+id/order_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffff">
+        android:background="#ffff"
+        >
 
         <TextView
             android:id="@+id/order_date"
@@ -18,6 +19,7 @@
             android:layout_height="wrap_content"
             android:text="10-1"
             android:textSize="20dp"
+            android:background="#FFA488"
             />
 
         <RelativeLayout
@@ -40,7 +42,8 @@
              android:layout_toRightOf="@id/hotel_name"
              android:layout_marginLeft="70dp"
              android:text="¥1000"
-             android:textSize="20dp"/>
+             android:textSize="20dp"
+             android:textColor="#FF5511"/>
           <RelativeLayout
               android:id="@+id/datebetween"
               android:layout_width="wrap_content"
@@ -97,16 +100,18 @@
                 android:layout_marginLeft="100dp"
                 android:layout_toRightOf="@id/morechoose"
                 android:text="已支付"
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:textColor="#FF5511"/>
             <Button
                 android:id="@+id/checkbutton"
                 android:layout_toLeftOf="@id/regetbutton"
+                android:layout_marginRight="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_common_1"
                 android:text="确认"
                 android:textSize="15dp"
-                android:textColor="#ffff"/>
+                android:textColor="#000000"/>
             <Button
                 android:id="@+id/regetbutton"
                 android:layout_alignParentRight="true"
@@ -115,7 +120,7 @@
                 android:background="@drawable/button_common_1"
                 android:text="再次预定"
                 android:textSize="15dp"
-                android:textColor="#ffff"/>
+                android:textColor="#000000"/>
 
 
         </RelativeLayout>

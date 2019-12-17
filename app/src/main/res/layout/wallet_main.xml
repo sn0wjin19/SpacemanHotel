@@ -4,39 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/wallet_headspace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EE5C42">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/backbutton"
+            android:layout_marginLeft="135dp"
+            android:text="全部订单"
+            android:textSize="32dp"
+            android:textColor="#ffff"/>
+    </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
         android:id="@+id/wallethead"
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        android:layout_below="@id/wallet_headspace"
         android:background="#EE5C42"
         android:orientation="vertical">
-        <RelativeLayout
-            android:id="@+id/wallethead_top"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true"
-            >
-
-            <Button
-                android:id="@+id/backbutton"
-                android:layout_width="34dp"
-                android:layout_height="match_parent"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="我的钱包"
-                android:textSize="40dp"
-                android:textColor="#ffff"
-                android:layout_centerInParent="true"/>
-
-        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_below="@id/wallethead_top"
             >
             <TextView
                 android:id="@+id/rental"
